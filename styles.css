@@ -1,0 +1,120 @@
+/* RESET */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+
+:root {
+    --clr-base: hsl(0, 0%, 100%);
+    --clr-bg: hsl(212, 45%, 89%);
+    --clr-heading: hsl(218, 44%, 22%);
+    --clr-txt: hsl(216, 15%, 48%);
+
+    --font-outfit: "Outfit", sans-serif;
+
+    --fs-paragraph: 15px;
+    --card-heading: 1.5rem; 
+    --fw-regular: 400;
+    --fw-bold: 700;
+
+    --spacing: 0.25rem;
+    --border-radius: 10px;
+}
+
+body {
+    background-color: var(--clr-bg);
+    font-family: var(--font-outfit);
+    font-weight: var(--fw-regular);
+    padding-inline: 1rem;
+    height: 100vh;
+    width: 100vw;
+}
+
+main{
+    height: calc(100vh - 16.5px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.qr-card {
+    background-color: var(--clr-base);
+    border-radius: calc(var(--border-radius) * 1.5);
+    box-shadow: -5px 5px 20px -5px rgba(0, 0, 0, 0.129);
+    max-width: 350px;
+    padding: calc(var(--spacing) * 4);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: calc(var(--spacing) * 4);
+    transition: box-shadow 0.35s ease;
+}
+
+.qr-card:hover {
+    box-shadow: -10px 10px 25px -5px rgba(0, 0, 0, 0.22);   
+}
+
+.qr-code {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.qr-txt-wrapper{
+    margin-bottom: calc(var(--spacing) * 4);
+    padding-inline: calc(var(--spacing) * 4);
+}
+
+.qr-card-title {
+    color: var(--clr-heading);
+    font-size: var(--card-heading);
+}
+
+.qr-card-description {
+    color: var(--clr-txt);
+    margin-top: calc(var(--spacing) * 4);
+}
+
+
+.attribution { 
+    font-size: 11px; text-align: center;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+
+@media (min-width: 1025px) {
+  .qr-card{
+    border-radius: calc(var(--border-radius) * 2);
+  }
+
+  .qr-txt-wrapper{
+    padding-inline: calc(var(--spacing) * 5);
+  }
+}
