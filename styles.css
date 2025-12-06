@@ -54,12 +54,9 @@ body {
 
 main{
     height: calc(100vh - 16.5px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    place-items: center;
 }
-
 
 .qr-card {
     background-color: var(--clr-base);
@@ -85,17 +82,17 @@ main{
     overflow: hidden;
 }
 
-.qr-txt-wrapper{
+.qr-txt{
     margin-bottom: calc(var(--spacing) * 4);
     padding-inline: calc(var(--spacing) * 4);
 }
 
-.qr-card-title {
+.qr-txt h1 {
     color: var(--clr-heading);
     font-size: var(--card-heading);
 }
 
-.qr-card-description {
+.qr-txt p{
     color: var(--clr-txt);
     font-size: var(--fs-paragraph);
     margin-top: calc(var(--spacing) * 4);
