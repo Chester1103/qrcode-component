@@ -97,6 +97,7 @@ main{
 
 .qr-card-description {
     color: var(--clr-txt);
+    font-size: var(--fs-paragraph);
     margin-top: calc(var(--spacing) * 4);
 }
 
