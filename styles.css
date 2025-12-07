@@ -107,7 +107,7 @@ main{
 }
 
 
-@media (min-width: 1025px) {
+@media (min-width: 480px) {
   .qr-card{
     border-radius: calc(var(--border-radius) * 2);
   }
